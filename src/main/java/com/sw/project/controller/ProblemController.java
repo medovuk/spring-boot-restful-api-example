@@ -99,7 +99,7 @@ public class ProblemController {
 		if(code.length() < 6 || code.equals(""))
 			throw new DataFormatException("Please check your code");
 				
-		problemService.deleteProblem(code);
+		problemService.deleteAllProblemWithCode(code);
 		
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
